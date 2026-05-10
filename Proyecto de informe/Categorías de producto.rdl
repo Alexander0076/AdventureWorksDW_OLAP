@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.14.37216.2</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-05-10T03:42:05.5002197Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-05-10T03:58:38.2555688Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -21,20 +21,31 @@
         <IntegratedSecurity>true</IntegratedSecurity>
       </ConnectionProperties>
       <rd:SecurityType>Integrated</rd:SecurityType>
-      <rd:DataSourceID>cf5d5290-8377-418d-baea-ca714be98f3f</rd:DataSourceID>
+      <rd:DataSourceID>685c138a-4a60-42f2-aa2c-4ea9a1907f8c</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>Reporte</DataSourceName>
-        <CommandText>EVALUATE SUMMARIZECOLUMNS('Dim Product'[Product Key], 'Dim Product'[Spanish Product Category Name], "Sales Amount", [Sales Amount])</CommandText>
+        <CommandText>EVALUATE SUMMARIZECOLUMNS('Dim Product'[Product Category Key], 'Dim Product'[Product Key], 'Dim Product'[Spanish Product Category Name], "Sales Amount", [Sales Amount])</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>DAX</CommandType>
             <QuerySpecification xsi:type="MDXQuerySpecification">
               <Select>
                 <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Product</DimensionName>
+                      <HierarchyName>Product Category Key</HierarchyName>
+                      <HierarchyUniqueName>[Dim Product].[Product Category Key]</HierarchyUniqueName>
+                      <LevelName>Product Category Key</LevelName>
+                      <UniqueName>[Dim Product].[Product Category Key].[Product Category Key]</UniqueName>
+                    </ID>
+                    <ItemCaption>Product Category Key</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
                   <Item>
                     <ID xsi:type="Level">
                       <DimensionName>Dim Product</DimensionName>
@@ -87,13 +98,17 @@
               </QueryProperties>
             </QuerySpecification>
             <Query>
-              <Statement>EVALUATE SUMMARIZECOLUMNS('Dim Product'[Product Key], 'Dim Product'[Spanish Product Category Name], "Sales Amount", [Sales Amount])</Statement>
+              <Statement>EVALUATE SUMMARIZECOLUMNS('Dim Product'[Product Category Key], 'Dim Product'[Product Key], 'Dim Product'[Spanish Product Category Name], "Sales Amount", [Sales Amount])</Statement>
               <ParameterDefinitions />
             </Query>
           </QueryDefinition>
         </rd:DesignerState>
       </Query>
       <Fields>
+        <Field Name="Product_Category_Key">
+          <DataField>Dim Product[Product Category Key]</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Product_Key">
           <DataField>Dim Product[Product Key]</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -170,7 +185,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Product Key</Value>
+                                  <Value>Product Category Key</Value>
                                   <Style>
                                     <FontFamily />
                                     <FontSize>11pt</FontSize>
@@ -208,7 +223,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Spanish Product Name</Value>
+                                  <Value>Product Key</Value>
                                   <Style>
                                     <FontFamily />
                                     <FontSize>11pt</FontSize>
@@ -246,7 +261,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Color</Value>
+                                  <Value>Spanish Product Category Name</Value>
                                   <Style>
                                     <FontFamily />
                                     <FontSize>11pt</FontSize>
@@ -323,6 +338,42 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Product_Category_Key">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Product_Category_Key.Value</Value>
+                                  <Style>
+                                    <FontFamily />
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Product_Category_Key</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <FontFamily />
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Product_Key">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -359,14 +410,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Spanish_Product_Name">
+                        <Textbox Name="Spanish_Product_Category_Name">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Spanish_Product_Name.Value</Value>
+                                  <Value>=Fields!Spanish_Product_Category_Name.Value</Value>
                                   <Style>
                                     <FontFamily />
                                     <Color>#333333</Color>
@@ -376,43 +427,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Spanish_Product_Name</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                            </Border>
-                            <BottomBorder>
-                              <Style>Solid</Style>
-                            </BottomBorder>
-                            <FontFamily />
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Color">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!Color.Value</Value>
-                                  <Style>
-                                    <FontFamily />
-                                    <Color>#333333</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Color</rd:DefaultName>
+                          <rd:DefaultName>Spanish_Product_Category_Name</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -527,5 +542,5 @@
   <Language>es-ES</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>7fbfc68a-87e6-4681-a720-6143488f8ec7</rd:ReportID>
+  <rd:ReportID>8806241c-0b68-42af-8d55-1afdfb46b60c</rd:ReportID>
 </Report>
