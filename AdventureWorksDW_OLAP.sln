@@ -1,18 +1,43 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37216.2 d17.14
+VisualStudioVersion = 17.14.37216.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "AdventureWorksDW_OLAP", "AdventureWorksDW_OLAP\AdventureWorksDW_OLAP.dwproj", "{FA2986A4-0751-8BF0-4B38-C863D505C690}"
 EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Proyecto de informe", "Proyecto de informe\Proyecto de informe.rptproj", "{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
 		Development|Default = Development|Default
+		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA2986A4-0751-8BF0-4B38-C863D505C690}.Debug|Default.ActiveCfg = Development
+		{FA2986A4-0751-8BF0-4B38-C863D505C690}.Debug|Default.Build.0 = Development
+		{FA2986A4-0751-8BF0-4B38-C863D505C690}.Debug|Default.Deploy.0 = Development
+		{FA2986A4-0751-8BF0-4B38-C863D505C690}.DebugLocal|Default.ActiveCfg = Development
+		{FA2986A4-0751-8BF0-4B38-C863D505C690}.DebugLocal|Default.Build.0 = Development
+		{FA2986A4-0751-8BF0-4B38-C863D505C690}.DebugLocal|Default.Deploy.0 = Development
 		{FA2986A4-0751-8BF0-4B38-C863D505C690}.Development|Default.ActiveCfg = Development
 		{FA2986A4-0751-8BF0-4B38-C863D505C690}.Development|Default.Build.0 = Development
 		{FA2986A4-0751-8BF0-4B38-C863D505C690}.Development|Default.Deploy.0 = Development
+		{FA2986A4-0751-8BF0-4B38-C863D505C690}.Release|Default.ActiveCfg = Development
+		{FA2986A4-0751-8BF0-4B38-C863D505C690}.Release|Default.Build.0 = Development
+		{FA2986A4-0751-8BF0-4B38-C863D505C690}.Release|Default.Deploy.0 = Development
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.Debug|Default.ActiveCfg = Debug
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.Debug|Default.Build.0 = Debug
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.Debug|Default.Deploy.0 = Debug
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.DebugLocal|Default.Build.0 = DebugLocal
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.Development|Default.ActiveCfg = Release
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.Development|Default.Build.0 = Release
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.Development|Default.Deploy.0 = Release
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.Release|Default.ActiveCfg = Release
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.Release|Default.Build.0 = Release
+		{A64A17A7-4A13-F7B5-2FD7-F40F308A708C}.Release|Default.Deploy.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
