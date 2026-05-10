@@ -467,6 +467,9 @@
         <Attribute dwd:design-time-name="8c75bfdd-d4a0-422a-b83b-dcb77ce2d124">
           <AttributeID>Spanish Day Name Of Week</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="f13dc6cf-aae3-466e-a5e5-79a9f61d4de9">
+          <AttributeID>Month Number Of Year</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="461805de-9e81-4247-af26-b1faf6016192">
@@ -497,6 +500,9 @@
         <Attribute dwd:design-time-name="c49c318e-cdad-4043-9c0c-db86fe0baea7">
           <AttributeID>Spanish Day Name Of Week</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="018f9dd5-552d-4dee-b7ce-647bc22efbb7">
+          <AttributeID>Month Number Of Year</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="20e52f37-bc3b-4a6f-8d56-1a683eb3e3be">
@@ -526,6 +532,9 @@
         </Attribute>
         <Attribute dwd:design-time-name="5d8b89b5-ff53-4502-9a02-b06e8beb6939">
           <AttributeID>Spanish Day Name Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aaecc180-6dd1-46c5-a88a-c5f29ebbc8ff">
+          <AttributeID>Month Number Of Year</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
